@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IOSRandomNumberGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="cRJ-UQ-REo">
+                                <rect key="frame" x="16" y="76" width="382" height="130"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXK-c0-xgo" userLabel="generateButton">
+                                <rect key="frame" x="76.5" y="222" width="261" height="261"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="generateButton"/>
+                                <state key="highlighted" image="pressedGenerateButton"/>
+                                <connections>
+                                    <action selector="generateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Qp-rS-Qh0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vhl-1j-WxV" userLabel="numberLabel">
+                                <rect key="frame" x="162.5" y="499" width="89" height="95.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="80"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MXK-c0-xgo" firstAttribute="top" secondItem="cRJ-UQ-REo" secondAttribute="bottom" constant="16" id="DfG-NI-P3K"/>
+                            <constraint firstItem="Vhl-1j-WxV" firstAttribute="top" secondItem="MXK-c0-xgo" secondAttribute="bottom" constant="16" id="Ql9-UZ-oDY"/>
+                            <constraint firstItem="cRJ-UQ-REo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="Rpd-QS-9aa"/>
+                            <constraint firstItem="cRJ-UQ-REo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="UQV-MU-BKp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cRJ-UQ-REo" secondAttribute="trailing" constant="16" id="YQs-EU-O9Q"/>
+                            <constraint firstItem="MXK-c0-xgo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fxa-rV-Syz"/>
+                            <constraint firstItem="Vhl-1j-WxV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mRy-QG-NXi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="numberLabel" destination="Vhl-1j-WxV" id="r9o-06-k66"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="generateButton" width="261" height="261"/>
+        <image name="logo" width="328" height="130"/>
+        <image name="pressedGenerateButton" width="261" height="261"/>
+    </resources>
+</document>
